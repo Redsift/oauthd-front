@@ -17,6 +17,7 @@
     "grunt-contrib-less": "^0.11.4"
   },
   "dependencies": {
+    "grunt": "^0.4.5",
     "async": "^1.4.2",
     "ecstatic": "^0.5.4",
     "q": "^1.4.1",
