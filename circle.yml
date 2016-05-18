@@ -7,6 +7,10 @@ general:
     only:
       - patched
 
+dependencies:
+  override:
+    - npm version
+
 test: 
   override:
     - /bin/bash -c "cat package.json"
