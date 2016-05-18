@@ -1,0 +1,12 @@
+machine: 
+  environment: 
+    CIRCLE_REVERSE_DEPENDENCIES: oauthd-service
+
+general:
+  branches:
+    only:
+      - patched
+
+test: 
+  override:
+    - /bin/bash -c "cat package.json"
