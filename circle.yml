@@ -10,3 +10,9 @@ general:
 test: 
   override:
     - /bin/bash -c "cat package.json"
+
+deployment: 
+  prod: 
+    branch: patched
+    commands: 
+      - "./circle_ci_trigger_build"
