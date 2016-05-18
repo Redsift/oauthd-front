@@ -90,7 +90,7 @@ module.exports = (app) ->
 				if confirm 'Are you sure you want to delete this app?'
 					AppService.del $scope.app
 						.then () ->
-							$state.go 'dashboard.apps.all'
+							$state.go 'dashboard.home'
 							$scope.error = undefined
 						.fail (e) ->
 							console.log 'error', e
