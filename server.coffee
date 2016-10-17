@@ -9,6 +9,7 @@ module.exports = (env) ->
 			if req.params[0] == '/'
 				res.setHeader 'Location', '/home'
 				res.send 302
+				return
 
 			fs.stat __dirname + '/public' + req.params[0], (err, stat) ->
 				if stat?.isFile()
