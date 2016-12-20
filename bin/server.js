@@ -12,6 +12,7 @@ module.exports = function(env) {
       if (req.params[0] === '/') {
         res.setHeader('Location', '/home');
         res.send(302);
+        return;
       }
       return fs.stat(__dirname + '/public' + req.params[0], function(err, stat) {
         if (stat != null ? stat.isFile() : void 0) {

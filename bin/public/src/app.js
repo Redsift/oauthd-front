@@ -302,7 +302,9 @@ module.exports = function(app) {
           $scope.setApp(app);
           $scope.error = void 0;
           $scope.$apply();
-          return $scope.domains_control.refresh();
+          if ($scope.domains_control.refresh) {
+            return $scope.domains_control.refresh();
+          }
         }).fail(function(e) {
           console.error(e);
           return $scope.error = e.message;
@@ -375,7 +377,7 @@ module.exports = function(app) {
       $scope.deleteApp = function() {
         if (confirm('Are you sure you want to delete this app?')) {
           return AppService.del($scope.app).then(function() {
-            $state.go('dashboard.apps.all');
+            $state.go('dashboard.home');
             return $scope.error = void 0;
           }).fail(function(e) {
             console.error(e);
