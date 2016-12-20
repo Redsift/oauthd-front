@@ -28,7 +28,7 @@
             <tr ng-repeat="plugin in plugins">
                 <td><span ng-show="!plugin.interface_enabled"><strong>{{plugin.name}}</strong></span><a ng-show="plugin.interface_enabled" ui-sref="dashboard.plugins({ plugin: plugin.name })"><strong>{{plugin.name}}</strong></a></td>
                 <td>{{plugin.description}}</td>
-                <td>{{plugin.version}}</td>
+                <td class="plugin_version">{{plugin.version}}</td>
                 <td><span ng-show="plugin.interface_enabled">Yes</span><span ng-show="!plugin.interface_enabled">No</span></td>
             </tr>
         </table>
